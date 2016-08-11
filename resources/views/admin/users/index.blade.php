@@ -37,6 +37,7 @@
                 <table class="table table-striped">
                   <thead>
                     <tr>
+                      <th width="25">Gravatar</th>
                       <th>Usuario</th>
                       <th>Nombre</th>
                       <th>Apellidos</th>
@@ -50,6 +51,7 @@
                   <tbody>
                     @foreach ($users as $user)
                       <tr>
+                        <td class="text-center"><img src="{{ Gravatar::src($user->email, 25) }}" class="img-rounded" alt="User Image"></td>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->first_name }}</td>
                         <td>{{ $user->last_name }}</td>
